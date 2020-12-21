@@ -1,5 +1,3 @@
-const { url } = require("inspector");
-
 class Router {
 
     constructor(routes) {
@@ -23,7 +21,7 @@ class Router {
             
             const routePathSegs = route.path.split('/').slice(1);//Sacamos la informacion que esta despues del /
 
-            if (routePathSegs.length !== url.length) {
+            if (routePathSegs.length !== urlSegs.length) {
                 return false;
             }
 
